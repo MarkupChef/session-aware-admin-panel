@@ -25,7 +25,7 @@ export function FeatureList() {
   return (
     <section aria-labelledby="features-heading" className="w-full max-w-sm lg:max-w-none">
       <h1 id="features-heading" className="font-heading text-2xl font-semibold">
-        Session Aware Admin Panel
+        Session Aware Admin Panel Architecture
       </h1>
       <p className="mt-1 text-sm text-muted-foreground">
         Webhooks admin with a resilient session layer.

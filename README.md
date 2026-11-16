@@ -1,10 +1,10 @@
-# Session Aware Admin Panel
+# Session Aware Admin Panel Architecture
 
 > Session rotation, CSRF, single-flight 401 retry
 
 Live demo: https://session-aware-admin-panel.vercel.app
 
-![Session Aware Admin Panel preview](preview.png)
+![Session Aware Admin Panel Architecture preview](preview.png)
 
 A webhooks admin app (sign in, list with search and pagination, edit form) built to demonstrate a
 resilient client-side session layer. The backend is fully mocked in the browser with MSW.
@@ -13,7 +13,7 @@ resilient client-side session layer. The backend is fully mocked in the browser 
 
 ## Presentation
 
-[View the presentation](https://notebook.google.com/notebook/5b07cc19-42f2-47ce-b764-4e9a89bf822d/artifact/de4b53cc-556b-4cb2-92f8-2da71f4d73ea?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_)
+[View the presentation](https://notebooklm.link.google/EiiiwQojvLX6)
 
 ## Getting started
 

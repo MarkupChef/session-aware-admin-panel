@@ -1,4 +1,4 @@
-# Feature Specification: Webhooks Admin App (Session Aware Admin Panel)
+# Feature Specification: Webhooks Admin App (Session Aware Admin Panel Architecture)
 
 **Feature Branch**: `001-webhooks-admin-app`
 
