@@ -5,9 +5,9 @@ export const USER_PASSWORD = 'password123';
 export const user: User = {
   id: 1,
   email: 'admin@example.test',
-  first_name: 'Ruslan',
-  last_name: 'Rastehaiev',
-  name: 'Ruslan Rastehaiev',
+  first_name: 'Admin',
+  last_name: 'User',
+  name: 'Admin User',
 };
 
 const WEBHOOK_NAMES = [
