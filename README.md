@@ -2,6 +2,8 @@
 
 > Session rotation, CSRF, single-flight 401 retry
 
+![Session Aware Admin Panel preview](preview.png)
+
 A webhooks admin app (sign in, list with search and pagination, edit form) built to demonstrate a
 resilient client-side session layer. The backend is fully mocked in the browser with MSW.
 
