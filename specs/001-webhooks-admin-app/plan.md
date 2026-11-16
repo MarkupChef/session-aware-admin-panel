@@ -1,4 +1,4 @@
-# Implementation Plan: Webhooks Admin App (Session Aware Admin Panel)
+# Implementation Plan: Webhooks Admin App (Session Aware Admin Panel Architecture)
 
 **Branch**: `001-webhooks-admin-app` | **Date**: 2026-10-16 | **Spec**: [spec.md](./spec.md)
 

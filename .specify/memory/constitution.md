@@ -35,7 +35,7 @@ Sync Impact Report
 - Deferred TODOs: none
 -->
 
-# Session Aware Admin Panel Constitution
+# Session Aware Admin Panel Architecture Constitution
 
 ## Core Principles
 

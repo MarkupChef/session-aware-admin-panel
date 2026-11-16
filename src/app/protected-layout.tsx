@@ -11,7 +11,9 @@ export function ProtectedLayout() {
     <div className="min-h-svh">
       <header className="border-b">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 p-4">
-          <span className="font-heading text-lg font-semibold">Session Aware Admin Panel</span>
+          <span className="font-heading text-lg font-semibold">
+            Session Aware Admin Panel Architecture
+          </span>
           <div className="flex items-center gap-3">
             <span className="text-sm text-muted-foreground">{me.name}</span>
             <Button
