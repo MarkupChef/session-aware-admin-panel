@@ -4,7 +4,7 @@ export const CSRF_TOKEN = 'mock-csrf-token-7f3a';
 export const USER_PASSWORD = 'password123';
 export const user: User = {
   id: 1,
-  email: 'admin@smartsender.test',
+  email: 'admin@example.test',
   first_name: 'Ruslan',
   last_name: 'Rastehaiev',
   name: 'Ruslan Rastehaiev',

@@ -9,7 +9,7 @@
 
 ## Layout
 
-- The protected layout has a header with a text wordmark "Smart Sender", `me.name` (from the route
+- The protected layout has a header with a text wordmark "Session Rotation Demo", `me.name` (from the route
   context returned by the guard), and a "Sign out" button.
 - There are no global error toasts. A sonner toast "Saved" is shown only after a successful save.
 

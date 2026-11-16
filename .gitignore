@@ -12,3 +12,9 @@ coverage/
 
 # Claude Code machine-local settings
 .claude/settings.local.json
+
+# Agent tooling (local only)
+.claude/
+.agents/
+.codex/
+AGENTS.md

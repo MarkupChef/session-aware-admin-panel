@@ -33,7 +33,7 @@
 
 - No frameworks or libraries are named in the spec. A few protocol-level terms do appear: HTTP
   status codes 401/419, the `X-Requested-With` header, POST/PUT and "HttpOnly-cookie equivalent".
-  They are kept on purpose. The test brief (`docs/smart-sender-senior-frontend-test.md`) imposes
+  They are kept on purpose. The original task brief (not included in this repo) imposes
   them as part of the external API contract, so they are requirements and not design choices.
 - The stack, module boundaries and typing rules are left to the constitution and `/speckit-plan`.
 - Validation passed on the first iteration.

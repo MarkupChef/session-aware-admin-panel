@@ -1,4 +1,4 @@
-# Implementation Plan: Webhooks Admin App (Smart Sender Senior Frontend Test)
+# Implementation Plan: Webhooks Admin App (Session Rotation Demo)
 
 **Branch**: `001-webhooks-admin-app` | **Date**: 2026-10-16 | **Spec**: [spec.md](./spec.md)
 
@@ -8,7 +8,7 @@
 
 This is a single-page React app with sign-in, a paginated and searchable webhook list, and webhook
 editing. It runs against an MSW mock that implements the contract from
-`docs/smart-sender-senior-frontend-test.md`. The core of the work is a framework-agnostic `fetch`
+the original task brief (not included in this repo). The core of the work is a framework-agnostic `fetch`
 transport. It fetches the CSRF token once and shares it, shares one rotate across concurrent 401s,
 retries each request at most once per error class, and normalises errors into a typed `ApiError`.
 On top of it sit TanStack Query for server state, TanStack Router search params as the only owner
@@ -57,7 +57,7 @@ two promoted rotate-safety tests (G5, G6) in Foundation, and up to 3 optional tr
 | VI. Explicit Module Boundaries | `app → features → api \| shared`; api has no React; features don't import each other; mocks import only api schemas; enforced by ESLint | ✅ | ✅ The structure below matches; `no-restricted-imports` zones are defined in the Setup phase. Test files in `api` may import `mocks` (one shared mock, Principle V). |
 | VII. Types as Contract | strict flags; no `any`/`!`/`as` (only `as const`)/`@ts-ignore`; `undefined` over `null`; exhaustive unions; `strictTypeChecked` | ✅ | ✅ `ApiError.info` is a discriminated union with `satisfies never` (data-model). |
 | VIII. Every Error Has One Owner | the error ownership table | ✅ | ✅ Mapped in data-model ApiError table and ui-routes screen states. Non-422 mutation errors are shown as a form `root` error (interpretation recorded in Complexity Tracking). |
-| Tech & UI constraints | Stack, URL write modes, semantic markup, English UI, brand tokens in `theme.css`, no logo assets | ✅ | ✅ R8, R13, ui-routes. |
+| Tech & UI constraints | Stack, URL write modes, semantic markup, English UI, theme tokens in `theme.css`, no logo assets | ✅ | ✅ R8, R13, ui-routes. |
 | Workflow | Setup PR first (ESLint, Prettier, husky + lint-staged, CI); issues per story; manual merge | ✅ | ✅ This is carried into `/speckit-tasks` as Phase 1 (Setup). |
 
 **Result**: PASS, with no principle violations. One workflow deviation is recorded in Complexity
@@ -126,7 +126,7 @@ src/
 │       ├── webhook-edit-page.tsx      # loading / not-found / error / form
 │       └── webhook-edit-form.tsx      # RHF + zod + server field errors
 └── shared/
-    ├── theme.css                # brand tokens → shadcn variables, fonts
+    ├── theme.css                # theme tokens → shadcn variables, fonts
     ├── cn.ts                    # shadcn `cn` helper (components.json `utils` alias)
     ├── routes.ts                # ROUTES / ROUTE_IDS path constants
     └── ui/                      # shadcn primitives (button, input, label, table, …)

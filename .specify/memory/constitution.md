@@ -1,6 +1,7 @@
 <!--
 Sync Impact Report
-- Version change: 2.1.0 → 2.2.0 (MINOR: duplication rule relaxed for obvious duplicates)
+- Version change: 2.2.0 → 2.2.1 (PATCH: employer brand attribution removed, theme tokens unchanged)
+- Earlier, 2.1.0 → 2.2.0 (MINOR: duplication rule relaxed for obvious duplicates)
 - Modified: I. Simplicity First — obviously duplicated logic MAY be extracted at the second
   repetition (was: never before the third).
 - Propagated: CLAUDE.md, AGENTS.md, plan.md Constitution Check.
@@ -34,7 +35,7 @@ Sync Impact Report
 - Deferred TODOs: none
 -->
 
-# Smart Sender Webhooks (Senior Frontend Test) Constitution
+# Session Rotation Demo Constitution
 
 ## Core Principles
 
@@ -189,12 +190,12 @@ src/
 - **UI**: thin components that render and delegate. Every async screen handles loading, empty,
   error (with retry) and success. Semantic markup (`<table>`, `<label for>`, `aria-invalid` +
   `aria-describedby` for field errors). UI language is English (matches server messages), plain strings, no i18n library.
-- **Brand (smartsender.com)**: expressed only through theme tokens in one `theme.css` mapped to
+- **Theme**: expressed only through theme tokens in one `theme.css` mapped to
   shadcn CSS variables — primary `#1380F6` (hover `#2276D2`), text `#232323`, muted `#595959`,
   surfaces `#FFFFFF`/`#FAFAFA`/`#F6F7F9`, borders `#E9ECEF`, success `#40C057`,
   destructive `#EB5757`; Montserrat (headings, buttons) + Open Sans (body) self-hosted via
   `@fontsource`; pill buttons, ~8px radius for cards/inputs; light theme only. No hard-coded hex
-  in components. Company logo and assets MUST NOT be copied — a text wordmark is used.
+  in components. No logo assets — a text wordmark is used.
 - **Security**: no tokens in state, URL or storage; only `fingerprint` in `localStorage`.
 
 ## Development Workflow
@@ -229,4 +230,4 @@ src/
   clarifications.
 - Every PR self-review verifies compliance with these principles.
 
-**Version**: 2.2.0 | **Ratified**: 2026-10-16 | **Last Amended**: 2026-10-17
+**Version**: 2.2.1 | **Ratified**: 2026-10-16 | **Last Amended**: 2026-11-16

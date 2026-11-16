@@ -1,6 +1,6 @@
 # Contract: HTTP API (implemented by the MSW mock, consumed by `src/api`)
 
-Source of truth: `docs/smart-sender-senior-frontend-test.md`. This file restates that contract and
+Source of truth: the original task brief (not included in this repo). This file restates that contract and
 pins down the behaviour the brief leaves implicit. Schemas: [data-model.md](../data-model.md).
 
 ## Common rules
