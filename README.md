@@ -2,6 +2,8 @@
 
 > Session rotation, CSRF, single-flight 401 retry
 
+Live demo: https://session-aware-admin-panel.vercel.app
+
 ![Session Aware Admin Panel preview](preview.png)
 
 A webhooks admin app (sign in, list with search and pagination, edit form) built to demonstrate a
@@ -74,10 +76,11 @@ How this was built (spec-driven development with Claude Code):
   `spec` → `clarify` → `plan` → `tasks` → `analyze` → `implement`.
 - **TDD for the transport layer.** Vitest + MSW node server, no React, no fake timers; each
   guarantee in `contracts/http-client.md` is backed by a test.
-- **Skills and plugins used:** Spec Kit commands (`speckit-*`), `superpowers` (brainstorming,
-  planning, debugging, verification), `shadcn`, `code-review` and `simplify`, `context-mode`
-  (large outputs kept out of context), `caveman` (terse replies).
+- **Superpowers and code review.** `superpowers` (brainstorming, planning, debugging,
+  verification) and `code-review` for every change.
 - **Process gates.** One GitHub issue per user story, branch per issue, Conventional Commits,
   PR with `Closes #n`, husky pre-commit (lint-staged, typecheck, tests) and required CI checks.
-- **Spec drift control.** Every fix is propagated across all artifacts and open issues, and
-  `analyze` is run until no CRITICAL/HIGH findings remain.
+
+## License
+
+[MIT](LICENSE)
