@@ -1,5 +1,8 @@
 # Session Aware Admin Panel Architecture
 
+[![CI](https://github.com/MarkupChef/session-aware-admin-panel/actions/workflows/ci.yml/badge.svg)](https://github.com/MarkupChef/session-aware-admin-panel/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 > Session rotation, CSRF, single-flight 401 retry
 
 Live demo: https://session-aware-admin-panel.vercel.app
