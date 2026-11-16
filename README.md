@@ -44,6 +44,44 @@ The transport test covers the key scenario: two parallel requests receive `401`,
 session rotation and both retry successfully. Other tests cover rotation failure, a repeated `401`,
 request cancellation, single-flight CSRF fetch and recovery after `419`.
 
+## How it works
+
+Two parallel requests hit an expired session. Both get `401`, but only one rotate request is sent;
+after it succeeds, each request is retried exactly once.
+
+```mermaid
+sequenceDiagram
+    participant UI as UI / TanStack Query
+    participant T as HTTP client
+    participant API as API (MSW)
+
+    par Request A
+        UI->>T: GET /webhooks
+        T->>API: GET /webhooks
+        API-->>T: 401 Unauthorized
+    and Request B
+        UI->>T: GET /me
+        T->>API: GET /me
+        API-->>T: 401 Unauthorized
+    end
+
+    Note over T: Both requests await one shared rotate promise
+    T->>API: POST /auth/token/rotate
+    API-->>T: 200 new session
+
+    par Retry A
+        T->>API: GET /webhooks
+        API-->>T: 200 OK
+        T-->>UI: data
+    and Retry B
+        T->>API: GET /me
+        API-->>T: 200 OK
+        T-->>UI: data
+    end
+
+    Note over T,API: If rotate fails or a retry returns 401 again, onSessionExpired signs the user out
+```
+
 ## Key decisions
 
 Rules and rationale live in the [constitution](.specify/memory/constitution.md),
