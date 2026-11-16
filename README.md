@@ -1,4 +1,4 @@
-# Session Rotation Demo
+# Session Aware Admin Panel
 
 > Session rotation, CSRF, single-flight 401 retry
 

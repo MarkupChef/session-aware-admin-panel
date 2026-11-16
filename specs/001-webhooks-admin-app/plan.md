@@ -1,4 +1,4 @@
-# Implementation Plan: Webhooks Admin App (Session Rotation Demo)
+# Implementation Plan: Webhooks Admin App (Session Aware Admin Panel)
 
 **Branch**: `001-webhooks-admin-app` | **Date**: 2026-10-16 | **Spec**: [spec.md](./spec.md)
 

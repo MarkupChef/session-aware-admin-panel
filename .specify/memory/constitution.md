@@ -35,7 +35,7 @@ Sync Impact Report
 - Deferred TODOs: none
 -->
 
-# Session Rotation Demo Constitution
+# Session Aware Admin Panel Constitution
 
 ## Core Principles
 

@@ -1,4 +1,4 @@
-# Feature Specification: Webhooks Admin App (Session Rotation Demo)
+# Feature Specification: Webhooks Admin App (Session Aware Admin Panel)
 
 **Feature Branch**: `001-webhooks-admin-app`
 
