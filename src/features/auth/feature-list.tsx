@@ -23,7 +23,7 @@ const FEATURES = [
 
 export function FeatureList() {
   return (
-    <section aria-labelledby="features-heading" className="w-full max-w-sm">
+    <section aria-labelledby="features-heading" className="w-full max-w-sm lg:max-w-none">
       <h1 id="features-heading" className="font-heading text-2xl font-semibold">
         Session Aware Admin Panel
       </h1>

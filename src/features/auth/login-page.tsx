@@ -47,9 +47,9 @@ export function LoginPage() {
   const rootError = errors.root?.server?.message;
 
   return (
-    <main className="flex min-h-svh flex-col items-center justify-center gap-6 p-4">
+    <main className="mx-auto grid min-h-svh w-full max-w-5xl content-center items-center justify-items-center gap-6 p-4 lg:grid-cols-2 lg:justify-items-stretch lg:gap-12">
       <FeatureList />
-      <Card className="w-full max-w-sm">
+      <Card className="w-full max-w-sm lg:justify-self-end">
         <CardHeader>
           <CardTitle className="text-xl">Sign in</CardTitle>
         </CardHeader>
