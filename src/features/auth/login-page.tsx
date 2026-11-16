@@ -8,6 +8,7 @@ import { ROUTES } from '@/shared/routes';
 import { Alert, AlertDescription } from '@/shared/ui/alert';
 import { Button } from '@/shared/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card';
+import { FeatureList } from './feature-list';
 import { useLogin } from './use-login';
 
 const GENERIC_ERROR = 'Sign-in failed. Please try again.';
@@ -46,10 +47,11 @@ export function LoginPage() {
   const rootError = errors.root?.server?.message;
 
   return (
-    <main className="flex min-h-svh items-center justify-center p-4">
-      <Card className="w-full max-w-sm">
+    <main className="mx-auto grid min-h-svh w-full max-w-5xl content-center items-center justify-items-center gap-6 p-4 lg:grid-cols-2 lg:justify-items-stretch lg:gap-12">
+      <FeatureList />
+      <Card className="w-full max-w-sm lg:justify-self-end">
         <CardHeader>
-          <CardTitle className="text-xl">Smart Sender 2.0</CardTitle>
+          <CardTitle className="text-xl">Sign in</CardTitle>
         </CardHeader>
         <CardContent>
           <form className="grid gap-4" noValidate onSubmit={(event) => void onSubmit(event)}>

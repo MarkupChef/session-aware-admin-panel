@@ -13,7 +13,7 @@ pnpm dev          # http://localhost:5173, MSW worker starts automatically (also
 ```
 
 Test credentials (single mock user; the final values also go in the README):
-`admin@smartsender.test` / `password123`.
+`admin@example.test` / `password123`.
 
 ## Quality gate
 

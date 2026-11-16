@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Senior frontend test task: admin app for Smart Sender webhooks (sign in, list with search/pagination, edit form). The backend is fully mocked with MSW. Task brief: `docs/smart-sender-senior-frontend-test.md`.
+Portfolio project: admin app demonstrating session rotation, CSRF and single-flight 401 retry (sign in, webhook list with search/pagination, edit form). The backend is fully mocked with MSW.
 
 Development is spec-driven with Spec Kit. **`.specify/memory/constitution.md` overrides specs, plans and tasks** — read it before non-trivial changes. Current feature artifacts: `specs/001-webhooks-admin-app/` (`spec.md`, `plan.md`, `tasks.md` is the source of truth for work items, `contracts/` documents non-obvious guarantees).
 
@@ -22,7 +22,7 @@ pnpm test                # vitest run (node env, src/**/*.test.ts only)
 pnpm exec vitest run src/api/http-client.test.ts -t "single rotate"   # single file / test
 ```
 
-Mock login: `admin@smartsender.test` / `password123` (`src/mocks/db.ts`).
+Mock login: `admin@example.test` / `password123` (`src/mocks/db.ts`).
 
 Pre-commit (husky) runs lint-staged, then full `typecheck` and `test`. `--no-verify` is forbidden. CI jobs `typecheck`, `lint` (incl. prettier check), `test` are required checks on `main` — do not rename them.
 
@@ -56,7 +56,7 @@ Dependency direction `app → features → api | shared`, enforced by ESLint `no
 - `undefined`, never `null`; API `null` converted at the zod boundary.
 - Exhaustive union handling (`assertNever` / `satisfies never`).
 - No abstraction before the third repetition (obviously duplicated logic may be extracted at the second); no `utils/`/`helpers/` folders; kebab-case files, max 3 nesting levels in `src/`, ~200 lines per file.
-- UI strings in English, no i18n library. Brand colors only via tokens in `src/shared/theme.css`, no hex in components.
+- UI strings in English, no i18n library. Theme colors only via tokens in `src/shared/theme.css`, no hex in components.
 
 ## Workflow
 

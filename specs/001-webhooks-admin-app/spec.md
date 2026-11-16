@@ -1,4 +1,4 @@
-# Feature Specification: Webhooks Admin App (Smart Sender Senior Frontend Test)
+# Feature Specification: Webhooks Admin App (Session Aware Admin Panel)
 
 **Feature Branch**: `001-webhooks-admin-app`
 
@@ -6,7 +6,7 @@
 
 **Status**: Ready
 
-**Input**: User description: "file ./docs/smart-sender-senior-frontend-test.md" — a small application with sign-in, a webhook list and webhook editing, running against a simulated API that follows the contract defined in that document.
+**Input**: User description: "the original task brief" — a small application with sign-in, a webhook list and webhook editing, running against a simulated API that follows the contract defined in that document.
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -185,7 +185,7 @@ values → server error shown under URL; enter valid values and save → success
 
 **Simulated API (mock)**
 
-- **FR-025**: The app MUST ship with a simulated API implementing exactly the contract in `docs/smart-sender-senior-frontend-test.md` (endpoints, statuses, response and error formats), used both in the browser and in the automated test.
+- **FR-025**: The app MUST ship with a simulated API implementing exactly the contract in the original task brief (not included in this repo) (endpoints, statuses, response and error formats), used both in the browser and in the automated test.
 - **FR-026**: The mock MUST hold one user with fixed credentials and 25–30 webhooks, keep all state in memory only, and return results in stable order.
 - **FR-027**: The mock MUST require a non-empty captcha header on sign-in, reject a wrong password with a field-level validation error, and reject invalid webhook data (empty name, non-HTTP/HTTPS URL) with field-level validation errors.
 - **FR-028**: The mock MUST expire sessions 30 seconds after issue/renewal (renewal extends by 30 seconds), reject renewal before issue and after revoke, and check the fixed anti-forgery token on POST/PUT before performing the operation.
@@ -229,7 +229,7 @@ token = `device_session_token`; device identifier = `fingerprint`; unauthenticat
 - Only name and URL are editable; active status, creation and deletion of webhooks are out of scope (not in the contract).
 - Session does not survive a page reload; re-signing in after reload is acceptable per the mock rules, and list parameters in the address are still applied.
 - The captcha header is sent with a fixed non-empty placeholder value; no captcha widget is shown.
-- UI language is English (matches server messages); a single light theme with Smart Sender brand colors and fonts; no company logo/assets are copied.
+- UI language is English (matches server messages); a single light theme with theme colors and fonts; no company logo/assets are copied.
 - Visual design is not evaluated; standard web desktop browsers are targeted, mobile polish is out of scope.
 - Only the one mandatory automated test is required; extra session/CSRF scenarios are added if time allows; UI is verified manually via a README checklist.
 - Stack and engineering rules are fixed by the project constitution (`.specify/memory/constitution.md`) and are applied at planning, not in this spec.

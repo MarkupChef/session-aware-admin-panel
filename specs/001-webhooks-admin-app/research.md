@@ -176,10 +176,10 @@ constitution leaves open. No `NEEDS CLARIFICATION` items remain.
   `onSessionExpired` called once; repeated 401 → no second rotate; 419 → one CSRF re-fetch.
 - **Rationale**: Principle V. The tests use no fake timers and no React.
 
-## R13. UI kit and brand
+## R13. UI kit and theme
 
 - **Decision**: shadcn/ui (button, input, label, table, card, skeleton, alert, sonner,
-  pagination). The theme lives in `src/shared/theme.css` and maps the brand tokens from the
+  pagination). The theme lives in `src/shared/theme.css` and maps the theme tokens from the
   constitution onto the shadcn CSS variables. Fonts come from `@fontsource/montserrat` and
   `@fontsource/open-sans`. The wordmark is text only.
 - **Rationale**: the constitution's Technology & UI Constraints.
